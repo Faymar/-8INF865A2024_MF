@@ -4,7 +4,7 @@ import com.faya.affirmation.R
 import com.faya.affirmation.model.Affirmation
 
 class Datasource() {
-    fun loadAffirmation(): List<Affirmation>{
+    fun loadAffirmations(): List<Affirmation>{
         return listOf<Affirmation>(
             Affirmation(R.string.affirmation1, R.drawable.image1),
             Affirmation(R.string.affirmation2, R.drawable.image2),
