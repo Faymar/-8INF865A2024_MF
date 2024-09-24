@@ -13,21 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.faya.cupcake.ui.theme
+package com.faya.cupcake.ui.components
 
-import androidx.compose.material3.Typography
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.sp
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import com.faya.cupcake.R
 
-// Set of Material typography styles to start with
-val Typography = Typography(
-    bodyLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
+/**
+ * Composable that displays formatted [price] that will be formatted and displayed on screen
+ */
+@Composable
+fun FormattedPriceLabel(subtotal: String, modifier: Modifier = Modifier) {
+    Text(
+        text = stringResource(R.string.subtotal_price, subtotal),
+        modifier = modifier,
+        style = MaterialTheme.typography.headlineSmall
     )
-)
+}
